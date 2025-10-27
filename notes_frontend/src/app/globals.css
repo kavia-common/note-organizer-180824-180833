@@ -1,10 +1,13 @@
 @import "tailwindcss";
 
+/* Ocean Professional Theme */
 :root {
-  --color-primary: #000000;
-  --color-secondary: #FFFFFF;
-  --color-accent: #3B82F6;
-  --color-background: #FFFFFF;
+  --ocean-primary: #2563EB; /* blue-600 */
+  --ocean-secondary: #F59E0B; /* amber-500 */
+  --ocean-error: #EF4444; /* red-500 */
+  --ocean-surface: #ffffff;
+  --ocean-bg: #f9fafb;
+  --ocean-text: #111827; /* slate-900 */
 }
 
 * {
@@ -17,10 +20,29 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: var(--color-background);
-  color: var(--color-primary);
+  background: var(--ocean-bg);
+  color: var(--ocean-text);
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  line-height: 1.35;
+}
+
+/* Smooth transitions for interactive elements */
+button,
+a,
+input,
+textarea {
+  transition: all 0.15s ease-in-out;
+}
+
+/* Utility for subtle card shadow */
+.ocean-card {
+  box-shadow: 0 1px 2px rgba(2, 6, 23, 0.04), 0 1px 1px rgba(2, 6, 23, 0.02);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  background: linear-gradient(180deg, rgba(59,130,246,0.04) 0%, rgba(255,255,255,0.9) 100%);
+  border-radius: 12px;
 }
